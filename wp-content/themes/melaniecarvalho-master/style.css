@@ -1,0 +1,260 @@
+/* 
+Theme Name: Vanilla
+Author: James Shakespeare
+Author URI: http://jshakespeare.com 
+Version: 1.0 
+Description: A bare-bones starting theme based on Initializr. Uses child loops atatched to pages specified in page.php. Based on a 940px layout with media queries available for 748px, mobile landscape (450px) and portrait (300px).
+
+
+Hot pink: #ec5cb1
+*/
+
+/* =============================================================================
+   Initializr Styles
+   ========================================================================== */
+   
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio[controls], canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+html { font-size: 100%; overflow-y: scroll; -webkit-overflow-scrolling: touch; -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+body { margin: 0; font-size: 13px; line-height: 1.231; }
+body, button, input, select, textarea { font-family: sans-serif; color: #222; }
+a:focus { outline: thin dotted; }
+a:hover, a:active { outline: 0; }
+abbr[title] { border-bottom: 1px dotted; }
+b, strong { font-weight: bold; }
+blockquote { margin: 1em 40px; }
+dfn { font-style: italic; }
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+ins { background: #ff9; color: #000; text-decoration: none; }
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+pre, code, kbd, samp { font-family: monospace, monospace; _font-family: 'courier new', monospace; font-size: 1em; }
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
+small { font-size: 85%; }
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
+dd { margin: 0 0 0 40px; }
+nav ul, nav ol { list-style: none; margin: 0; padding: 0; }
+img { border: 0; -ms-interpolation-mode: bicubic; }
+svg:not(:root) {    overflow: hidden;}
+figure { margin: 0; }
+form { margin: 0; }
+fieldset { border: 0; margin: 0; padding: 0; }
+legend { border: 0; *margin-left: -7px; padding: 0; }
+label { cursor: pointer; }
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+button, input { line-height: normal; *overflow: visible; }
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; }
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; }
+input[type="search"] { -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+textarea { overflow: auto; vertical-align: top; }
+input:valid, textarea:valid {  }
+input:invalid, textarea:invalid { background-color: #f0dddd; }
+table { border-collapse: collapse; border-spacing: 0; }
+
+/* =============================================================================
+   Primary styles
+   Author: 
+   ========================================================================== */
+
+/* -------------------- FONTS -------------------- */
+
+@font-face {
+    font-family: 'Gandhi';
+    src: url('/wp-content/themes/melaniecarvalho-master/fonts/GandhiSans-Regular-webfont.eot');
+    src: url('/wp-content/themes/melaniecarvalho-master/fonts/GandhiSans-Regular-webfont.eot#iefix') format('embedded-opentype'),
+         url('/wp-content/themes/melaniecarvalho-master/fonts/GandhiSans-Regular-webfont.woff') format('woff'),
+         url('/wp-content/themes/melaniecarvalho-master/fonts/GandhiSans-Regular-webfont.ttf') format('truetype'),
+         url('/wp-content/themes/melaniecarvalho-master/fonts/GandhiSans-Regular-webfont.svg#GandhiSansRegular') format('svg');
+    font-weighfonts/t: normal;
+    font-style: normal;
+}
+
+/* -------------------- ELEMENT DEFAULTS -------------------- */
+
+body{
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  background: #fff;
+  color: #333;
+  padding: 0 4em;
+}
+
+p{  line-height: 1.6em; margin: 0 0 10px 0;  }
+a{   color: #333; text-decoration: underline; }
+a:hover{    color: #ec5cb1;   }
+
+/* headings */
+
+h1, h2, h3, h4, h5{  font-weight: normal; margin: 0; font-family: 'Gandhi', 'Lucida Grande', Arial, sans-serif; }
+h1{ font-size: 2em;  }
+h2{ font-size: 2em; margin: 0 0 1em; }
+h3{ font-size: 1.5em; }
+h4{ font-size: 1em; }
+
+/* -------------------- WIDTHS -------------------- */
+
+header, section.s1, .container, footer{  clear: both; margin: 0 auto; width: 960px;  }
+h4{ font-size: 1.2em; }
+h5{ font-size: 1em;   }
+
+/* -------------------- WIDTHS -------------------- */
+
+section.s1{  width: 168px; }
+section.s2{  width: 366px; } 
+section.s3{  width: 564px; } 
+section.s4{  width: 762px; }
+
+/* -------------------- LAYOUT -------------------- */
+
+section{   float: left; margin: 0 0 0 30px; }
+.wrapper{  width: 100%; clear: both; }
+section:first-child{ margin-left: 0;  }
+
+/* header */
+
+header{  padding: 3em 0; } 
+header h1 a{   text-decoration: none;  }
+header h1 a:hover{   color: #ec5cb1; }
+
+/* sidebar/nav */
+
+aside nav{  font-family: 'Gandhi', 'Lucida Grande', Arial, sans-serif; font-size: 1.2em; text-transform: lowercase;  }
+aside nav li{   margin: .5em 0;  }
+aside nav a{    text-decoration: none;    }
+aside nav li.current_page_item, aside nav li.current_page_item a, aside nav li a:hover{    color: #ec5cb1;   }
+aside nav ul li ul{   padding-left: 1em;  }
+
+/* works */
+
+.bricks{  visibility: hidden; }
+.bricks article{    text-align: left; position: relative; margin: 0 0 30px; float: left; width: 168px;   }
+.bricks article a{   display: block; text-decoration: none; }
+.bricks article a img{  opacity: 0; height: auto; width: 100%; box-shadow: 0 0 10px rgba(0, 0, 0, .5); -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .5); -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .5); -o-box-shadow: 0 0 10px rgba(0, 0, 0, .5); }
+.bricks article a h3{   margin: 1em 0 0; font-size: 1.1em;  }
+
+.bricks, .bricks article, {-webkit-transition-duration: 0.7s; -moz-transition-duration: 0.7s; -ms-transition-duration: 0.7s; -o-transition-duration: 0.7s; transition-duration: 0.7s; }
+.bricks{ -webkit-transition-property: height, width; -moz-transition-property: height, width; -ms-transition-property: height, width; -o-transition-property: height, width; transition-property: height, width; }
+.bricks article {-webkit-transition-property: left, right, top; -moz-transition-property: left, right, top; -ms-transition-property: left, right, top; -o-transition-property: left, right, top; transition-property: left, right, top; }
+
+.bricks article.featured{   width: 366px;  }
+
+.bricks article:nth-child(2){   margin-top: -1em;  }
+
+/* footer */
+
+footer{   padding: 2em 0;  }
+
+/* -------------------- PAGES -------------------- */
+
+/*home*/
+
+#home img.attachment-homepage{   width: 100%;   }
+
+/*work*/
+
+article.work .caption{  display: none;  }
+article.work.single h3{   margin-bottom: 1em;   }
+article.work.single img{   height: auto; visibility: hidden;   }
+article.work.video{    margin: 0 0 2em;   }
+article.work.video h3{    margin: 0 0 1em; font-size: 1.2em;   }
+.fancybox-skin{   border-radius: 0; -moz-border-radius: 0; -o-border-radius: 0; -webkit-border-radius: 0;  }
+
+/* Fancybox */
+
+.fancybox-nav span{   display: none;  }
+.fancybox-next{   cursor: e-resize; }
+.fancybox-prev{   cursor: w-resize; } 
+.fancybox-close{   background: url("/wp-content/themes/melaniecarvalho-master/img/overlay-close.png") no-repeat 50% 50%;   }
+
+/* -------------------- CLASSES -------------------- */
+
+.left{   float: left; }
+.right{   float: right; }
+.clear{   clear: both; }
+.center{   text-align: center; }
+
+/* typo */
+
+.large{  font-size: 1.4em; line-height: 1em;   }
+.italic{  font-style: italic; }
+.meta{   font-size: .8em; }
+
+/* buttons - for unifying styles across button-like <a>, <button>, <input type="submit"> and <input type="reset"> */
+
+a.btn, button, input[type=submit], input[type=reset]{ padding: 6px; color: #000; background: #fff; text-decoration: none; position: relative; margin: 0 20px 10px 0; line-height: 1.1em; display: inline-block; border: none;  }
+
+/* -------------------- MEDIA QUERIES -------------------- */
+
+
+/* Mobile Landscape */
+@media all and (min-width: 480px) and (max-width: 748px) { 
+  
+  body{  padding: 0;  }
+  header{    padding: 1.5em 0;   }
+  header, section.s1, .container, footer, section.s2, section.s3, section.s4, article{  width: 450px; } 
+  section{   margin: 0 0 20px !important; }
+  img, iframe{   max-width: 100%; }
+
+  .bricks article{   width: 130px !important;   }
+  .bricks article.featured{   width: 100% !important;   }
+}
+
+/* Mobile Portrait */
+@media all and (min-width: 0px) and (max-width: 479px) { 
+
+  body{  padding: 0;  }
+  header{    padding: 1.5em 0;   }
+  header, section.s1, .container, footer, section.s2, section.s3, section.s4, article{  width: 300px; } 
+  section{   margin: 0 0 20px !important; }
+  img, iframe{   max-width: 100%; height: auto; }
+
+  .bricks article{   width: 100% !important;   }
+}
+
+/* -------------------- PSEUDO -------------------- */
+
+/* selection colours */
+
+::-moz-selection { background: #ec5cb1; color: #fff; text-shadow: none; }
+::selection { background: #ec5cb1; color: #fff; text-shadow: none; }
+
+
+/* =============================================================================
+   Non-semantic helper classes
+   Please define your styles before this section.
+   ========================================================================== */
+
+.ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
+.ir br { display: none; }
+.hidden { display: none; visibility: hidden; }
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+.invisible { visibility: hidden; }
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+/* =============================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+ 
+@media print {
+  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: sanbeiji.com/archives/953 */
+  a, a:visited { color: #444 !important; text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } /* css-discuss.incutio.com/wiki/Printing_Tables */
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3{ page-break-after: avoid; }
+}
